@@ -32,3 +32,15 @@ import_csv <- function(driveFileUrl) {
 
     return(ubereats)
 }
+
+list_all_files <- function(driveFolderUrl) {
+    # get the dribble of the folder
+    dribble <- driveFolderUrl |>
+        as_dribble()
+
+    # list all the files in the folder
+    dribble |>
+        drive_ls() -> files
+
+    return(files[c("name","id")])
+}
