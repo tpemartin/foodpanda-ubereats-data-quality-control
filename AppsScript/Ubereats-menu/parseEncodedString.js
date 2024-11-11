@@ -12,7 +12,7 @@ function parseEncodedString(encodedString) {
   }
   
   // Log or return the parsed JSON data
-  Logger.log(jsonData);
+  // Logger.log(jsonData);
   return jsonData;
 }
 

@@ -21,7 +21,7 @@ function concatenateDataFromIds(foldername="2024-9-8") {
     
     // Logger.log(id)
     if (id) {
-      var data = importCsv(id);
+      var data = importCsvParseMenu(id);
       
       if (data.length > 0) {
         if (!headersWritten) {
