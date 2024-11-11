@@ -10,13 +10,29 @@ function importCsv(fileId='12cDROEqMMN9T-VHG2jkC5zIPpEFXRg1F') {
       throw new Error("CSV data is not an array or it is empty.");
     }
 
-    var ubereats = augmentUbereatsMenu(csvData);
+    // var ubereats = augmentUbereatsMenu(csvData);
 
-    Logger.log(ubereats);
+    // Logger.log(ubereats);
+    Logger.log(csvData)
+
     // Logger.log(Object.keys(ubereats[0]))
-    return ubereats;
+    return csvData;
   } catch (error) {
     Logger.log(error.message);
     return [];
   }
+}
+function importCsvParseMenu(fileId='12cDROEqMMN9T-VHG2jkC5zIPpEFXRg1F'){
+  var csvData = importCsv(fileId)
+  // in headers there is "menu", add two more headers "menu1" and "menu2"
+  
+  // Other than headers row, 
+  // for each row, 
+  //    - obtain menu value
+  //.   - parseEncodedString of menu value
+  //.   - 
+  var menuValue = getMenuColumn(csvData)
+  Logger.log(menuValue)
+  
+
 }

@@ -45,3 +45,9 @@ function testPrepareMenuSheetData() {
 ```
 
 Modify the content so that `augUbereatsMenu` can be written to a sheet named "data" in the active spreadsheet.
+
+
+`csvData` has headers row with a header named "menu". define augmentedUbereatsMenu function so that:
+1. header "menu" will be removed and add "menu1" and "menu2" headers. 
+2. For each observation's menu value (say `menuValue`), get its `parseEncodedString(menuValue)` as `parsedMenuValue`.
+2.1. decode it to obtain 

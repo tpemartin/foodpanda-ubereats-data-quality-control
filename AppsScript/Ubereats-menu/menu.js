@@ -32,3 +32,13 @@ function promptForFolderName2importCSV() {
     ui.alert('No folder name entered. Please try again.');
   }
 }
+function promptForFolderName2importCSV_proto() {
+  var response = "2024-9-8"
+  // Check if user pressed "OK" or entered a value
+  if (response.getSelectedButton() === ui.Button.OK) {
+    var folderName = response.getResponseText();
+    concatenateDataFromIds(folderName);  // Call the function with the folder name
+  } else {
+    ui.alert('No folder name entered. Please try again.');
+  }
+}

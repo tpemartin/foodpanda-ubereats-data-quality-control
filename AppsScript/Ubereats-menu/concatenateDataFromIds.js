@@ -1,5 +1,5 @@
 
-function concatenateDataFromIds(foldername="2024-9-30") {
+function concatenateDataFromIds(foldername="2024-9-8") {
 
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var fileListSheet = ss.getSheetByName("files: "+foldername);

@@ -46,13 +46,13 @@ function testPrepareMenuSheetData() {
 
   var content = file.getBlob().getDataAsString();
   var ubereatsMenu = Utilities.parseCsv(content);
-  Logger.log(ubereatsMenu);
+  Logger.log(ubereatsMenu[1]);
   
-  var augUbereatsMenu = augmentUbereatsMenu(ubereatsMenu);
-  Logger.log(augUbereatsMenu);
-  Logger.log(augUbereatsMenu[0])
-  Logger.log(augUbereatsMenu[0].length)
-  Logger.log(augUbereatsMenu[1].length)
+  // var augUbereatsMenu = augmentUbereatsMenu(ubereatsMenu);
+  // Logger.log(augUbereatsMenu);
+  // Logger.log(augUbereatsMenu[0])
+  // Logger.log(augUbereatsMenu[0].length)
+  // Logger.log(augUbereatsMenu[1].length)
   // Write the augmented menu to the sheet
-  sheet.getRange(1, 1, augUbereatsMenu.length, augUbereatsMenu[0].length).setValues(augUbereatsMenu);
+  // sheet.getRange(1, 1, augUbereatsMenu.length, augUbereatsMenu[0].length).setValues(augUbereatsMenu);
 }
