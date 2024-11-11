@@ -30,13 +30,20 @@ function importCsvParseMenu(fileId='12cDROEqMMN9T-VHG2jkC5zIPpEFXRg1F') {
   }
 
   var headers = csvData[0];
+  var menuIndex = headers.indexOf("menu");
+
+  if (menuIndex !== -1) {
+    headers.splice(menuIndex, 1);
+  }
+
   headers.push("menu1", "menu2");
 
   var newCsvData = [headers];
 
   for (var i = 1; i < csvData.length; i++) {
     var row = csvData[i];
-    var menu = row[headers.indexOf("menu")];
+    var menu = row[menuIndex];
+    row.splice(menuIndex, 1);
     var parsedMenu = parseEncodedString(menu);
     var [menu1, menu2] = separateMenu(parsedMenu);
     row.push(menu1, menu2);
