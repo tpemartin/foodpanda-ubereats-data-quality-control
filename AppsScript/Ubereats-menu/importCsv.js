@@ -22,17 +22,26 @@ function importCsv(fileId='12cDROEqMMN9T-VHG2jkC5zIPpEFXRg1F') {
     return [];
   }
 }
-function importCsvParseMenu(fileId='12cDROEqMMN9T-VHG2jkC5zIPpEFXRg1F'){
-  var csvData = importCsv(fileId)
-  // in headers there is "menu", add two more headers "menu1" and "menu2"
+function importCsvParseMenu(fileId='12cDROEqMMN9T-VHG2jkC5zIPpEFXRg1F') {
+  var csvData = importCsv(fileId);
   
-  // Other than headers row, 
-  // for each row, 
-  //    - obtain menu value
-  //.   - parseEncodedString of menu value
-  //.   - 
-  var menuValue = getMenuColumn(csvData)
-  Logger.log(menuValue)
-  
+  if (csvData.length === 0) {
+    return csvData;
+  }
 
+  var headers = csvData[0];
+  headers.push("menu1", "menu2");
+
+  var newCsvData = [headers];
+
+  for (var i = 1; i < csvData.length; i++) {
+    var row = csvData[i];
+    var menu = row[headers.indexOf("menu")];
+    var parsedMenu = parseEncodedString(menu);
+    var [menu1, menu2] = separateMenu(parsedMenu);
+    row.push(menu1, menu2);
+    newCsvData.push(row);
+  }
+
+  return newCsvData;
 }
