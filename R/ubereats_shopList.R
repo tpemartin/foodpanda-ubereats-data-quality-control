@@ -44,3 +44,21 @@ list_all_files <- function(driveFolderUrl) {
 
     return(files[c("name","id")])
 }
+
+augment_eyeball_request_count <- function(ubereats){
+    ubereats$score_breakdown |>
+        map_dfr(~ {
+            .x |>
+                base64enc::base64decode() |>
+                rawToChar() |>
+                jsonlite::fromJSON() -> score_breakdown
+            tibble(
+                t120d_eyeball_count = score_breakdown$t120d_eyeball_count,
+                t120d_request_count = score_breakdown$t120d_request_count
+            )
+        }) -> df_score_breakdown
+
+    # bind score_breakdown to ubereats
+    ubereats <- bind_cols(ubereats, df_score_breakdown)
+    return(ubereats)
+}

@@ -1,0 +1,22 @@
+---
+title: "BigQuery SQL"
+output: html_document
+date: "2025-01-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# preset
+
+I am using BigQuery under project id 'food-delivery-432217'. I need your assistance for SQL.
+
+## ubereats_shoplist
+
+I am using BigQuery under project id 'food-delivery-432217'. I need your assistance for SQL.
+
+Create a SQL for data set 'ubereats_shoplist' that
+
+  1. Set a table named "2024-9" called `stacked_table_name`.
+  2. Look for all table names beginning with  `stacked_table_name`'s string value, then stack them together into one table, and name it as "stacked_"+`stacked_table_name`.
