@@ -75,6 +75,7 @@ read_ubereats_menu <- function(file_path) {
             deliverFee = as.numeric(deliverFee),
             rateCt = as.numeric(rateCt),
             postalCode = as.character(postalCode),
+            address = as.character(address)
         ) |>
         dplyr::mutate(
             catLst = purrr::map_chr(catLst, ~ {
