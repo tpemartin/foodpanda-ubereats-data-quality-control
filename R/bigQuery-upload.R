@@ -23,7 +23,7 @@ stacked_data |>
 ## menu ----
 source("R/bigQuery-helpers.R")
 
-folder <- "data/ubereats-menu/2024-10-13"
+folder <- "data/ubereats-menu/2024-9-8"
 
 ### list files
 files <- list.files(folder, full.names = TRUE)
