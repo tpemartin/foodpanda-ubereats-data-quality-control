@@ -22,3 +22,36 @@ EXECUTE IMMEDIATE 'CREATE TABLE {{detination_table}} AS ' || sql_query;
 ```
 
 EXECUTE IMMEDIATE 'CREATE TABLE `food-delivery-432217.ubereats_shoplist_stacked.2024-9` AS ' || sql_query;
+
+# bdplyr
+
+You are using R to working datasets in BigQuery. You use `tidyverse` and `bigrquery` packages. 
+
+You connect to the project through the following code:
+
+```r
+library(dplyr)
+library(bigrquery)
+library(DBI)
+project_id = "food-delivery-432217"
+
+
+# create a connection
+con <- dbConnect(
+  bigrquery::bigquery(),
+  project = project_id,
+  dataset = dataset_id
+)
+
+# Get all the table names
+tables <- dbListTables(con)
+```
+
+Objects that are not defined above are treated as existing in the global environment.
+
+You will be asked for some tasks to working on the project. If you understand, say "yes".
+
+## Workflow
+
+Create a work flow that will Upload all csv files in a google drive folder to BigQuery
+
