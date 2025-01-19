@@ -7,7 +7,7 @@
 
 ### Menu csv
 
-<iframe width="500"  height="350" src="https://lookerstudio.google.com/embed/reporting/b27d442e-989b-4042-abaa-c1519d591e31/page/p_t1ir12wyod" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+<iframe width="100%"  height="550" src="https://lookerstudio.google.com/embed/reporting/b27d442e-989b-4042-abaa-c1519d591e31/page/p_t1ir12wyod" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 
 #### Anchor point efficiency
 
