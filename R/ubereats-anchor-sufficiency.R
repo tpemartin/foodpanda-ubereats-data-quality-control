@@ -174,3 +174,7 @@ shops_anchors_coverage |>
 
 shops_anchors_coverage$location |>
   unique() |> length()
+
+
+# Menu coverage check-----
+
